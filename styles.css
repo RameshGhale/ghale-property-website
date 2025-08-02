@@ -1,16 +1,36 @@
+:root {
+  --blue: #1d3b5a;
+  --gold: #bfa46a;
+  --white: #fff;
+  --light-blue: #23406a;
+  --grey: #f5f6fa;
+}
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
-  background: #1d3b5a;
-  color: #fff;
+  background: var(--grey);
+  color: var(--blue);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header {
-  background: #1d3b5a;
+  background: var(--blue);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 18px 0;
 }
 
 .logo {
@@ -19,24 +39,26 @@ header {
 }
 
 .g-icon {
-  font-size: 2.5em;
-  color: #bfa46a;
-  border: 2px solid #bfa46a;
+  font-size: 2.2em;
+  color: var(--gold);
+  border: 2px solid var(--gold);
   border-radius: 8px;
   padding: 0 12px;
   margin-right: 12px;
   font-weight: bold;
+  background: var(--white);
 }
 
 .brand {
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: 600;
   letter-spacing: 2px;
+  color: var(--white);
 }
 
 .property-box {
-  background: #fff;
-  color: #1d3b5a;
+  background: var(--white);
+  color: var(--blue);
   padding: 2px 10px;
   border-radius: 4px;
   margin-left: 8px;
@@ -45,158 +67,222 @@ header {
 }
 
 nav a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 14px;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 nav a:hover {
-  color: #bfa46a;
+  color: var(--gold);
 }
 
 .hero {
-  background: #23406a;
+  background: var(--blue);
+  color: var(--white);
+  padding: 70px 0 50px 0;
   text-align: center;
-  padding: 60px 20px 40px 20px;
 }
 
-.hero h1 {
-  font-size: 2.5em;
+.hero-content h1 {
+  font-size: 2.7em;
   margin-bottom: 10px;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.2em;
   margin-bottom: 30px;
-  color: #bfa46a;
+  color: var(--gold);
 }
 
 .search-bar {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 25px;
 }
 
 .search-bar input {
-  padding: 10px;
+  padding: 12px;
   border-radius: 4px;
   border: none;
-  width: 250px;
+  width: 260px;
+  font-size: 1em;
 }
 
 .search-bar button {
-  padding: 10px 20px;
-  background: #bfa46a;
-  color: #1d3b5a;
+  padding: 12px 24px;
+  background: var(--gold);
+  color: var(--blue);
   border: none;
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 1em;
 }
 
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+.cta-buttons {
+  margin-top: 18px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--blue);
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.cta.secondary {
+  background: var(--white);
+  color: var(--blue);
+  border: 2px solid var(--gold);
+}
+
+.cta:hover {
+  background: #e2c98a;
+}
+
+.section {
+  padding: 60px 0 40px 0;
+  background: var(--grey);
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: var(--blue);
 }
 
 .property-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 28px;
+  justify-content: flex-start;
 }
 
 .property-card {
-  background: #fff;
-  color: #1d3b5a;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 16px;
-  width: 300px;
+  background: var(--white);
+  color: var(--blue);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 18px;
+  width: 320px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .property-card img {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .property-card button {
-  background: #bfa46a;
-  color: #1d3b5a;
+  background: var(--gold);
+  color: var(--blue);
   border: none;
-  padding: 8px 16px;
+  padding: 10px 18px;
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.press-logos {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
 }
 
-blockquote {
-  background: #23406a;
-  border-left: 5px solid #bfa46a;
-  padding: 20px;
+.press-logos img {
+  height: 38px;
+  filter: grayscale(1) brightness(0.7);
+}
+
+.testimonials blockquote {
+  background: var(--white);
+  border-left: 5px solid var(--gold);
+  padding: 22px;
   margin: 20px 0;
   font-style: italic;
+  border-radius: 6px;
+  color: var(--blue);
+}
+
+.blog-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.blog-post {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 18px;
+  width: 300px;
+}
+
+.blog-post h3 {
+  margin-top: 0;
+}
+
+.blog-post a {
+  color: var(--blue);
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 form input, form textarea {
   display: block;
   width: 100%;
-  margin-bottom: 12px;
-  padding: 10px;
+  margin-bottom: 14px;
+  padding: 12px;
   border-radius: 4px;
-  border: none;
+  border: 1px solid #ddd;
+  font-size: 1em;
 }
 
 form button {
-  background: #bfa46a;
-  color: #1d3b5a;
+  background: var(--gold);
+  color: var(--blue);
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 1em;
 }
 
 footer {
-  background: #23406a;
+  background: var(--blue);
   text-align: center;
-  padding: 20px;
-  color: #fff;
+  padding: 22px 0;
+  color: var(--white);
   margin-top: 40px;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: #fff;
-  color: #1d3b5a;
-  padding: 30px;
-  border-radius: 8px;
-  width: 350px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 16px;
-  top: 10px;
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #bfa46a;
+@media (max-width: 900px) {
+  .property-list, .blog-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .property-card, .blog-post {
+    width: 100%;
+    max-width: 400px;
+  }
+  .press-logos {
+    flex-direction: column;
+    gap: 18px;
+  }
 }
