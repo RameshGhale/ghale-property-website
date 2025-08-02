@@ -6,7 +6,7 @@ const exampleProperties = [
     type: "For Sale",
     location: "Aldershot",
     description: "Modern family home close to local schools and amenities.",
-    image: "https://via.placeholder.com/300x200"
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
   },
   {
     title: "2 Bed Flat, Aldershot",
@@ -14,7 +14,15 @@ const exampleProperties = [
     type: "For Sale",
     location: "Aldershot",
     description: "Modern flat in the heart of Aldershot.",
-    image: "https://via.placeholder.com/300x200"
+    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    title: "4 Bed Detached, Farnborough",
+    price: 525000,
+    type: "For Sale",
+    location: "Farnborough",
+    description: "Spacious detached home with large garden.",
+    image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=400&q=80"
   }
 ];
 
@@ -30,40 +38,12 @@ function loadProperties() {
       <h3>${p.title}</h3>
       <p>£${p.price.toLocaleString()} | ${p.type}</p>
       <p>${p.description}</p>
-      <button onclick="openViewingForm('${p.title}')">Book a Viewing</button>
+      <button onclick="alert('Booking for: ${p.title}')">Book a Viewing</button>
     `;
     list.appendChild(card);
   });
 }
 window.onload = loadProperties;
-
-// Mortgage Calculator
-document.getElementById('mortgage-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const amount = parseFloat(document.getElementById('amount').value);
-  const interest = parseFloat(document.getElementById('interest').value) / 100 / 12;
-  const years = parseInt(document.getElementById('years').value);
-  const n = years * 12;
-  const monthly = (amount * interest) / (1 - Math.pow(1 + interest, -n));
-  document.getElementById('mortgage-result').innerText =
-    isFinite(monthly)
-      ? `Estimated Monthly Payment: £${monthly.toFixed(2)}`
-      : 'Please enter valid numbers.';
-});
-
-// Viewing Modal
-function openViewingForm(propertyName) {
-  document.getElementById('viewing-modal').style.display = 'flex';
-  document.getElementById('property-name').value = propertyName;
-}
-function closeViewingForm() {
-  document.getElementById('viewing-modal').style.display = 'none';
-}
-document.getElementById('viewing-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Your viewing request has been sent!');
-  closeViewingForm();
-});
 
 // Contact Form
 document.getElementById('contact-form').addEventListener('submit', function(e) {
