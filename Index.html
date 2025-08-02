@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghale Property | Estate Agents in Aldershot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Replace with your logo image if you wish -->
+      <span class="g-icon">G</span>
+      <span class="brand">GHALE <span class="property-box">PROPERTY</span></span>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#calculator">Mortgage Calculator</a>
+      <a href="#blog">Blog</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Find Your Next Home in Aldershot</h1>
+    <p>With you in every step</p>
+    <form class="search-bar">
+      <input type="text" placeholder="Search by area, postcode, or property type">
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <section id="about">
+    <h2>About Ghale Property</h2>
+    <p>Ghale Property is your trusted estate agent in Aldershot and surrounding areas, offering sales, lettings, and property management. Backed by years of experience and a passion for property, we guide you through every step of your journey.</p>
+  </section>
+
+  <section id="properties">
+    <h2>Featured Properties</h2>
+    <div id="property-list" class="property-list"></div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Sales:</strong> Helping you buy or sell your home with confidence.</li>
+      <li><strong>Lettings:</strong> Matching tenants and landlords for stress-free rentals.</li>
+      <li><strong>Property Management:</strong> Full management for peace of mind.</li>
+    </ul>
+  </section>
+
+  <section id="calculator">
+    <h2>Mortgage Calculator</h2>
+    <form id="mortgage-form">
+      <input type="number" id="amount" placeholder="Loan Amount (£)" required>
+      <input type="number" id="interest" placeholder="Interest Rate (%)" required>
+      <input type="number" id="years" placeholder="Term (years)" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="mortgage-result"></div>
+  </section>
+
+  <section id="blog">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-list">
+      <div class="blog-post">
+        <h3>How to Prepare Your Home for Sale</h3>
+        <p>Top tips to get the best price for your property in Aldershot.</p>
+        <a href="#">Read more</a>
+      </div>
+      <!-- Add more blog posts as needed -->
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote>
+      "Ghale Property made selling our house so easy. Highly recommended!"<br>
+      <span>- Mrs. Smith, Aldershot</span>
+    </blockquote>
+    <!-- Add more testimonials as needed -->
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: info@ghaleproperty.co.uk | Phone: 01252 123456</p>
+    <p>Address: 123 High Street, Aldershot, GU11 1AA</p>
+  </section>
+
+  <!-- Viewing booking modal -->
+  <div id="viewing-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeViewingForm()">&times;</span>
+      <h2>Book a Viewing</h2>
+      <form id="viewing-form">
+        <input type="text" id="property-name" readonly>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone" required>
+        <input type="date" required>
+        <button type="submit">Book</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Ghale Property. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
